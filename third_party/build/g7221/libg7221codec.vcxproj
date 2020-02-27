@@ -79,7 +79,8 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{2A3F241E-682C-47E1-9543-DC28708B406A}</ProjectGuid>
     <RootNamespace>libg7221codec</RootNamespace>
-    <DefaultLanguage>en-US</DefaultLanguage>    
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
     <!-- Specific UWP property -->
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -175,8 +176,10 @@
   </PropertyGroup>
   <!-- Override the PlatformToolset -->
   <PropertyGroup>
-    <PlatformToolset>$(BuildToolset)</PlatformToolset><CharacterSet Condition="'$(API_Family)'=='WinDesktop'">MultiByte</CharacterSet>
-    <CharacterSet Condition="'$(API_Family)'!='WinDesktop'"></CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet Condition="'$(API_Family)'=='WinDesktop'">MultiByte</CharacterSet>
+    <CharacterSet Condition="'$(API_Family)'!='WinDesktop'">
+    </CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
