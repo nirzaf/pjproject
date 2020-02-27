@@ -158,9 +158,6 @@
     </ProjectReference>
   </ItemGroup>
   <!--Don't build this project unless it's for WinPhone8-->
-  <Import Condition="'$(API_Family)'=='WinPhone8'" Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-  <Import Condition="'$(API_Family)'=='WinPhone8'" Project="$(MSBuildExtensionsPath)\Microsoft\WindowsPhone\v$(TargetPlatformVersion)\Microsoft.Cpp.WindowsPhone.$(TargetPlatformVersion).targets" />
-  <Import Condition="'$(API_Family)'!='WinPhone8'" Project="..\..\..\..\..\..\build\vs\pjproject-vs14-build-targets.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
 </Project>
